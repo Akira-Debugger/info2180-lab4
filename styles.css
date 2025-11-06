@@ -1,0 +1,38 @@
+.heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  grid-column: 1/3;
+  background-color: red;
+  color:  #FFFFFF;
+  font-size: 50px;
+}
+
+#body{
+    background-color: aqua;
+
+}
+
+#searchbtn{
+    background-color: purple;
+    padding: 10px;
+    color: white;
+    border-radius: 20%;
+}
+#searchInput
+{
+    width: 600px;
+    height: 40px;
+    font-size:14pt;
+}
+.subheading
+{
+    font-size: 20pt;
+    font-weight: bold;
+    
+}
+.form{
+    text-align: center;
+}

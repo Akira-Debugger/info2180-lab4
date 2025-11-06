@@ -5,11 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Superhero Searching</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
   </head>
-  <body>
-      <h1>Avengers Character Search</h1>
-      <button id="searchSuperhero">Search</button>
+  <body id="body">
+    <h1 class="heading">Avengers Character Search</h1>
+    <p class="subheading">Search by Full Name or Alias</p>
+
+    <form class="form" id="searchForm">
+      <input
+        type="text"
+        placeholder="eg. Peter Parker or Spiderman"
+        id="searchInput"
+      />
+      <input type="submit" value="Search" id="searchbtn" />
+    </form>
+    
+    <p class="subheading">Result</p>
+    <p>__________________________________________________________________________________________________________________________</p>
+    <div id="result"></div>
   </body>
 </html>

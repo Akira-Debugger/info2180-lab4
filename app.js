@@ -1,13 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const btn = document.getElementById('searchSuperhero');
+  const super_Form = document.getElementById('searchForm');
+  let super_result = document.getElementById('result');
 
-  btn.addEventListener('click', () => {
-    fetch('superheroes.php')
+  super_Form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const super_input = document.getElementById('searchInput').value;
+
+    let super_url = super_input? `superheroes.php?query=${encodeURIComponent(super_input)}` : 'superheroes.php';
+
+    fetch(super_url)
       .then(response => response.text())
       .then(SupesList => {
 
-        alert(SupesList);
+        super_result.innerHTML = SupesList;
       })
-      .catch(() => alert('Error occurred in getting superheroes.'));
+      .catch(() => alert('Error occurred in displaying list.'));
   });
 });
